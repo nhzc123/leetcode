@@ -4,8 +4,6 @@
 using namespace std;
 
 int main(){
-	vector<int> tmp(2,1);
-	vector<vector<int> > result(2,tmp);
-
+	cout<<2 * 2 * 1 / 2<<endl;
 	return 0;
 }
