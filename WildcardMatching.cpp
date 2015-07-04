@@ -39,3 +39,38 @@ public:
 
     }
 };
+
+class Solution {
+	public:
+		bool isMatch(const char *s, const char *p){
+			char starP = nullptr;
+			char starS = nullptr;
+
+			while (*s){
+
+				if (*s == *p || *p == '?'){
+					s ++;
+					p ++;
+					continue;
+				}
+				if (*p == '*'){
+					starP = p;
+					p ++;
+					starS = s;
+					continue;
+				}
+				if (starP != nullptr){
+					p = starP + 1;
+					s = starS + 1;
+					starS += 1;
+					continue;
+				}
+				return false;
+			}
+			while (*p == '*'){
+				p ++;
+			}
+			return *p == '\0';
+
+		}
+};

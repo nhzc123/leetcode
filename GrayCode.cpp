@@ -21,3 +21,12 @@ public:
         return result;
     }
 };
+
+
+grayToInt(int x){
+	int y = x;
+	while (x >>= 1){
+		y ^= x;
+	}
+	return x;
+}

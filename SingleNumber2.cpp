@@ -1,3 +1,4 @@
+//http://www.cnblogs.com/zsboy/p/3889499.html
 class Solution {
 public:
     int singleNumber(int A[], int n) {

@@ -1,3 +1,4 @@
+http://www.cnblogs.com/felixfang/p/3620086.html
 class Solution {
 public:
     int candy(vector<int> &ratings) {

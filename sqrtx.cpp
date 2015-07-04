@@ -26,3 +26,5 @@ public:
         }
     }
 };
+
+http://blog.chinaunix.net/uid-24118190-id-75267.html
