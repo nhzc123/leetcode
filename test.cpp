@@ -1,21 +1,42 @@
+/**
+ * @file test.cpp
+ * @brief
+ * @author nhzc   charles.nhzc@gmail.com
+ * @version 1.0.0
+ * @date 2015-08-15
+ */
 #include<iostream>
-#include<string>
-#include<vector>
-#include<set>
 using namespace std;
-
-int main(){
-	multiset<int> s;
-	s.insert(2);
-	auto be = s.begin();
-	cout<<*be<<endl;
-	auto en = s.end();
-	cout<<*en<<endl;
-	auto lb = s.lower_bound(2);
-	cout<<*lb<<endl;
-	auto ub = s.upper_bound(2);
-	cout<<(ub == s.begin())<<endl;
-	cout<<*ub<<endl;
-	return 0;
+bool isBadVersion(int version){
+	if (version >= 1702766719){
+		return true;
+	}
+	else{
+		return false;
+	}
 }
+int firstBadVersion(int n) {
+        int left = 0;
+        int right = n - 1;
+        while (left <= right){
+            int mid = left + (right - left) / 2;
+			cout<<mid<<endl;
+            if (isBadVersion(mid)){
+                right = mid - 1;
+            }
+            else{
+                left = mid + 1;
+            }
+        }
+        return left;
+    }
 
+int main(int argc, char *argv[])
+
+{
+
+cout<<firstBadVersion(2126753390)<<endl;
+
+return 0;
+
+}
