@@ -168,7 +168,7 @@ public:
 		}
 		swap(head -> val, pre -> val);
 		quickSort(head, pre);
-		quickSort(p1, tail);
+		quickSort(h1, tail);
 
 
 	}

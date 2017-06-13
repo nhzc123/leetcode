@@ -12,7 +12,7 @@ public:
        for (int i = 0;i < gas.size(); i++){
 
            total += gas[i] - cost[i];
-           sum += gas[i] = cost[i];
+           sum += gas[i] - cost[i];
 
            if (sum < 0){
 

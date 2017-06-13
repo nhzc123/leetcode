@@ -34,7 +34,7 @@ public:
             if (cols[i] == 0){//列上面没有Q
                 int j;
                 for ( j = 0; j < q; j ++){
-                    if (abs(j - q) == abs(i - rows[j])){//就是判断行差值与列差值，如果每一行的Q在对角向上 则相等
+                    if (abs(j - q) == abs(i - rows[j])){//就是判断行差值与列差值，如果每一行的Q在对角向上 则相等 也就是找对角线
                         break;
                     }
                 }
